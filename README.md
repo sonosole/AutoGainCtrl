@@ -13,7 +13,7 @@ enter the repl mode and add the module
 using WAV
 using AGC
 
-wav, fs = wavread("D:/repos/agc/doc/123.wav");
+wav, fs = wavread("./doc/123.wav");
 agc!(wav,fs,maxvalue=0.3);       # in-place operation
 new = agc(wav,fs,maxvalue=0.3);  # deepcopy wav and then operate in-place
 
