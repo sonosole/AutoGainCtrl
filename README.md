@@ -2,6 +2,7 @@
  Automatic gain control module for speech signals
 
 ## Installation
+enter the repl mode and add the module
 ```julia
 ]add https://github.com/sonosole/AGC.git
 ```
@@ -12,9 +13,9 @@
 using WAV
 using AGC
 
-wav, fs = wavread("D:/repos/agc/doc/123.wav")
-agc!(wav,fs,maxvalue=0.3)
-new = agc(wav,fs,maxvalue=0.3)
+wav, fs = wavread("D:/repos/agc/doc/123.wav");
+agc!(wav,fs,maxvalue=0.3);       # in-place operation
+new = agc(wav,fs,maxvalue=0.3);  # deepcopy wav and then operate in-place
 
 wavwrite(wav, "D:/repos/agc/doc/agced1.wav", Fs=fs, nbits=32)
 wavwrite(new, "D:/repos/agc/doc/agced2.wav", Fs=fs, nbits=32)
