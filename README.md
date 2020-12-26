@@ -1,9 +1,9 @@
 # AGC
- Automatic gain control for speech signals 语音信号的自动增益控制模块
+ Automatic gain control module for speech signals
 
 ## Installation
 ```julia
-]add
+]add https://github.com/sonosole/AGC.git
 ```
 
 ## Example
