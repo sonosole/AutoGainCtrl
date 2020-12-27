@@ -3,6 +3,15 @@ global MAXVALUE =  0.6;
 global AGCGAIN  =  1.0;
 
 
+"""
+    setagc(;gain=1.0, maxvalue=0.6, minstep=-0.6)
+
+Set the automatic-gain-control module's parameters.
+# Optional Arguments
+- `gain    `: inital speech signal's gain value
+- `maxvalue`: specified maximum value for speech signal, maxvalue ∈ (0, +Inf)
+- `minstep `: minimum value to change the gain, minstep ∈ (-1, 0)
+"""
 function setagc(;gain=1.0, maxvalue=0.6, minstep=-0.6)
     global MINSTEP;
     global MAXVALUE;
@@ -15,6 +24,13 @@ function setagc(;gain=1.0, maxvalue=0.6, minstep=-0.6)
 end
 
 
+"""
+    onlineagc!(wav::Array)
+
+Streaming automatic-gain-control module for speech signal.
+# Arguments
+- `wav`: one frame of speech signal
+"""
 function onlineagc!(wav::Array)
     global MINSTEP;
     global MAXVALUE;
@@ -29,6 +45,13 @@ function onlineagc!(wav::Array)
 end
 
 
+"""
+    onlineagc(wav::Array) -> Array
+
+Streaming automatic-gain-control module for speech signal.
+# Arguments
+- `wav`: one frame of speech signal
+"""
 function onlineagc(wav::Array)
     data = deepcopy(wav)
     onlineagc!(data)
