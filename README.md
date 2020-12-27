@@ -6,6 +6,10 @@ Enter the REPL mode and add the module
 ```julia
 ]add https://github.com/sonosole/AGC.git
 ```
+or
+```julia
+]add AGC
+```
 
 ## Offline Example
 In offline situation, the input is a whole single channel speech signal.
