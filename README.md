@@ -4,11 +4,11 @@
 ## Installation
 Enter the REPL mode and add the module
 ```julia
-]add https://github.com/sonosole/AGC.git
+]add https://github.com/sonosole/AutoGainCtrl.git
 ```
 or
 ```julia
-]add AGC
+]add AutoGainCtrl
 ```
 
 ## Offline Example
