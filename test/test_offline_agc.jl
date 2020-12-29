@@ -1,5 +1,5 @@
 using WAV
-using AGC
+using AutoGainCtrl
 
 wav, fs = wavread("./doc/123.wav")
 

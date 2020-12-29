@@ -1,4 +1,4 @@
-# AGC
+# AutoGainCtrl
  Automatic gain control module for speech signals
 
 ## Installation
@@ -16,7 +16,7 @@ In offline situation, the input is a whole single channel speech signal.
 
 ```julia
 using WAV
-using AGC
+using AutoGainCtrl
 
 wav, fs = wavread("./doc/123.wav")
 

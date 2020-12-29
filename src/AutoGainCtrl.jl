@@ -1,4 +1,4 @@
-module AGC
+module AutoGainCtrl
 
 # offline part
 export agc!
