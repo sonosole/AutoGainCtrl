@@ -21,8 +21,8 @@ function agc!(wav::Array, fs::Real=16000.0; maxvalue::Real=0.6, minstep::Real=-0
     for t = 1:frames
         index = firstIds[t]:lasstIds[t];
         frame = wav[index];
-        hmax = maximum(abs.(frame));
-        step = 1.0 - hmax*maxvalue;
+        fmax = maximum(abs.(frame));
+        step = 1.0 - fmax*maxvalue;
         step = step * abs(step);
         step = max(minstep, min(step, 0.0));
         gain = 0.8*gain + 0.2*(1 + step);
