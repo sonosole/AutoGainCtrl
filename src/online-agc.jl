@@ -35,8 +35,8 @@ function onlineagc!(wav::Array)
     global MINSTEP;
     global MAXVALUE;
     global AGCGAIN;
-    hmax = maximum(abs.(wav));
-    step = 1.0 - hmax*MAXVALUE;
+    fmax = maximum(abs.(wav));
+    step = 1.0 - fmax*MAXVALUE;
     step = step * abs(step);
     step = max(MINSTEP, min(step, 0.0));
     AGCGAIN = 0.8*AGCGAIN + 0.2*(1 + step);
