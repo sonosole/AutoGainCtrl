@@ -1,3 +1,5 @@
+![AGC-Control-Curve](./doc/AGC-Control-Curve.png)
+
 # AutoGainCtrl
  Automatic gain control module for speech signals
 
